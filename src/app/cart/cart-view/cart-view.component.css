@@ -1,0 +1,16 @@
+.price-wrap {
+  display: flex;
+}
+.price-wrap span {
+  display: inline;
+}
+
+.price {
+  font-weight: 800;
+}
+
+.subWrap {
+  border-top: 1px solid #E91E63;
+  display: flex;
+  align-items: center;
+}

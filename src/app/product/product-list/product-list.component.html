@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="product-nav">
+    <h2>Our Latest Collection</h2>
+    <div class="filter-nav">
+      <mat-form-field class="example-full-width">
+        <mat-label>Search product</mat-label>
+        <input matInput placeholder="Ex. Pizza" value="" (keyup)="applyFilter($event)">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-select (selectionChange)="sortProducts($event.value)" placeholder="sort products">
+          <mat-option value="priceLowHigh">Price: Low to High</mat-option>
+          <mat-option value="priceHighLow">Price: High to Low</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+  </div>
+  <div class="card-wrap">
+    <div *ngIf="!productFound">
+      No product found
+    </div>
+    <div *ngFor="let product of filteredProducts" class="product-card">
+      <mat-card class="product-card" (click)="addToCart(product)">
+        <img mat-card-image src="assets/images/{{product.image_url}}">
+        <mat-card-content>
+          <mat-card-title>{{product.name}}</mat-card-title>
+          <mat-card-subtitle>{{product.price | currency: 'USD'}}</mat-card-subtitle>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+

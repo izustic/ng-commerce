@@ -1,0 +1,31 @@
+.product-card {
+  width: 200px;
+  flex-grow: 1;
+}
+mat-card {
+  margin: 0 auto;
+  transition: transform .2s ease-in-out;
+}
+mat-card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  box-sizing: border-box;
+  justify-content: flex-start; 
+}
+
+.product-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.filter-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
